@@ -1,10 +1,10 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
-function User() {
+function User(props) {
     const {userid} = useParams()
     return (
-        <div>user:{userid}</div>
+        <div>user:{props.name}{userid}</div>
     )
 }
 
