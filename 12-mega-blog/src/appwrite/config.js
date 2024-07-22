@@ -126,4 +126,4 @@ export class Services{
     }
 }
 
-const services = new Services()
+export const services = new Services()
