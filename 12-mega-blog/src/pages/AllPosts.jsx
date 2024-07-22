@@ -1,5 +1,5 @@
 import React from 'react'
-import { Services } from '../appwrite/config'
+import { services } from '../appwrite/config'
 import { Container, PostCard } from '../components'
 function AllPosts() {
     const [posts, setPosts] = React.useState([])

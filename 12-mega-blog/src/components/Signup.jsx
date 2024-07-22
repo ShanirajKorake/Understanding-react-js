@@ -5,6 +5,7 @@ import { useForm } from'react-hook-form'
 import { Button, Input, Logo } from './index';
 import { logIn } from '../store/authSlice';
 import { useDispatch } from'react-redux';
+import { Link } from 'react-router-dom';
 
 export default function Signup() {
     const navigate = useNavigate();

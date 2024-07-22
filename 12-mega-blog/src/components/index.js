@@ -26,4 +26,5 @@ export {
     PostForm,
     Login,
     PostCard,
+    Protected,
 }
