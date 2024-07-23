@@ -37,7 +37,7 @@ function PostForm({ post }) {
             if (file) {
                 const fileID = file.$id
                 data.featuredImage = fileID
-                await services.createPost({
+                const dbPost = await services.createPost({
                     ...data,
                     userId: userData.$id,
                 })
@@ -70,7 +70,7 @@ function PostForm({ post }) {
         return () => {
             subscription.unsubscribe()
         }
-    }, [watch, slugTransform, setValues])
+    }, [watch, slugTransform, setValue])
 
     return (
         <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">

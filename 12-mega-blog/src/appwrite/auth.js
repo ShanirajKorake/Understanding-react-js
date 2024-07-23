@@ -2,7 +2,7 @@ import conf from "../conf/conf";
 import { Client, Account, ID } from "appwrite";
 
 
-class AuthServices{
+export class AuthServices{
     client = new Client()
     account
 
@@ -18,7 +18,7 @@ class AuthServices{
             const userAcc = await this.account.create(ID.unique(),email,password,name)
             if (userAcc) {
                 //call another method
-                return this.account.logIn({email,password})
+                return this.logIn({email,password})
             } else {
                 return userAcc;
             }
@@ -37,7 +37,7 @@ class AuthServices{
 
     async getCurrentUsr(){
         try {
-            await this.account.get();
+            return await this.account.get();
         } catch (error) {
             throw error;
         }

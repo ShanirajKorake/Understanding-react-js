@@ -72,8 +72,8 @@ class Services{
                 slug
             )
         } catch (error) {
-            throw error;
-            return false;
+            console.log("Appwrite serive :: getPost :: error", error);
+            return false
         }
     }
 
@@ -119,7 +119,7 @@ class Services{
     }
 
     getFilePreV(fileId){
-        this.bucket.getFilePreview(
+        return this.bucket.getFilePreview(
             conf.appwriteBucketID,
             fileId
         )
